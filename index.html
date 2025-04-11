@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Animated GIF Viewer</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Animated GIF Viewer</h1>
+        <button class="theme-toggle" id="themeToggle">Light Mode</button>
+      </div>
+
+      <div class="dropbanner">
+        <p>Drag & Drop GIF file in the box</p>
+        <p>or</p>
+        <button id="browseButton">Browse Files</button>
+      </div>
+
+      <div class="dropzone" id="dropzone">
+        <input type="file" id="fileInput" accept=".gif" style="display: none" />
+
+        <div class="gif-container hidden" id="gifContainer">
+          <img id="gifDisplay" src="" alt="GIF Preview" />
+        </div>
+      </div>
+
+      <div class="controls hidden" id="controls">
+        <div class="slider-container">
+          <input
+            type="range"
+            min="0"
+            max="0"
+            value="0"
+            class="slider"
+            id="frameSlider"
+            disabled
+          />
+        </div>
+        <div class="buttons">
+          <button id="playPauseButton" disabled>Play</button>
+          <button id="clearButton" disabled>Clear</button>
+          <div class="frame-counter" id="frameCounter">Frame: 0/0</div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/omggif@1.0.9/omggif.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
